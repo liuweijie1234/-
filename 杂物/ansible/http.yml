@@ -1,0 +1,10 @@
+---
+- hosts: zabbix_agent
+  remote_user: root
+
+  tasks:
+    - name:
+
+    - name:
+
+    - name:

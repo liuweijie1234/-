@@ -1,0 +1,16 @@
+## 您拿到课程实战示例代码(class-framework)需要修改如下配置
+
+- conf/default.py 文件：APP_ID \ APP_TOKEN （蓝鲸智云开发者中心 -> 点击应用ID -> 基本信息 中可以查看到这个两个值的信息）
+	
+- conf/default.py 文件：BK_PAAS_HOST（蓝鲸智云开发者中心的域名，形如：http://paas.bking.com）
+	
+- conf/settings_development.py 文件：DATABASES（本地开发数据库信息）
+	
+- conf/settings_testing.py 文件：DATABASES（测试环境数据库信息）
+	
+- conf/settings_production.py 文件：DATABASES（正式环境数据库信息）
+
+
+## cm目录代码为组件封装示例代码，您需要按照课程指引修改配置调试
+
+

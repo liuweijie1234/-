@@ -1,0 +1,7 @@
+---
+- hosts: mine
+  remote_user: root
+
+  tasks:
+    - name: hello
+      command: hostname

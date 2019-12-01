@@ -1,0 +1,16 @@
+---
+- hosts: zabbix_agent
+  remote_user: root
+  tasks:
+  - name: install zabbix_agent packages
+    yum: name={{ item }} state=latest
+    with_items:
+    - curl-devel
+  - name: copy install_shell to clien
+    copy: src=/etc/ansible/zabbix_agent.sh dest=/usr/local/src/zabbix_agent.sh
+  - name: sent tar
+    copy: src=/usr/local/src/zabbix-4.0.12.tar.gz dest=/usr/local/src/zabbix-4.0.12.tar.gz
+    notify: install shell
+  handlers:
+  - name: install shell
+    shell: /bin/bash /usr/local/src/zabbix_agent.sh

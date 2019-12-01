@@ -1,0 +1,19 @@
+---
+- hosts: zabbix_agent
+  remote_user: root
+
+  tasks:
+    - name: create new file
+      file: name=/root/newfile state=touch
+
+    - name: create new user
+      user: name=test2 system=yes shell=/sbin/nologin
+
+    - name: install package
+      yum: name=httpd state=latest
+
+    - name: copy html
+      copy: src=/etc/yum.repos.d/CentOs-Base.repo dest=/etc/yum.repos.d/CentOs-Base.repo
+
+    - name: start service
+      service: name=httpd state=started enabled=yes
