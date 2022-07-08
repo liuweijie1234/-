@@ -2,5 +2,5 @@ Django==1.11.23
 MarkupSafe==0.23
 Mako==1.0.1
 httplib2==0.9.1
-suds==0.4
+suds==1.0.0
 requests
